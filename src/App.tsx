@@ -21,10 +21,10 @@ export function App() {
   return (
     <>
       <div className='flex min-h-screen flex-col'>
-        <div className='flex items-center justify-between border-b px-6 py-3'>
+        <div className='flex items-center justify-between border-b px-6 py-3 gap-4'>
           <h1 className='text-xl font-bold italic'>upload.ai</h1>
           <div className='flex items-center gap-3'>
-            <span className='text-sm text-muted-foreground'>Desenvolvido por @lucasnsaraujo</span>
+            <span className='text-xs sm:text-sm text-muted-foreground text-right'>Desenvolvido por @lucasnsaraujo</span>
             <Separator orientation='vertical' className='h-6' />
             <Button variant='outline'>
               <Github className='mr-2 h-4 w-4' />
@@ -33,15 +33,15 @@ export function App() {
           </div>
         </div>
 
-        <main className='flex flex-1 gap-6 p-6'>
+        <main className='flex flex-col sm:flex-row flex-1 gap-6 p-6'>
           <div className='flex flex-1 flex-col gap-4'>
             <div className='grid flex-1 grid-rows-2 gap-4'>
               <Textarea
-                className='resize-none p-4 leading-relaxed'
+                className='resize-none p-4 leading-relaxed min-h-[400px]'
                 placeholder='Inclua o prompt para a IA...'
               />
               <Textarea
-                className='resize-none p-4 leading-relaxed'
+                className='resize-none p-4 leading-relaxed min-h-[400px]'
                 placeholder='Resultado gerado pela IA'
                 readOnly
               />
@@ -52,7 +52,7 @@ export function App() {
               adicionar o conteúdo da transcrição do vídeo selecionado.
             </p>
           </div>
-          <aside className='w-80 space-y-6'>
+          <aside className='w-full sm:w-80 space-y-6'>
             <form className='space-y-6'>
               <label
                 className='flex aspect-video cursor-pointer flex-col items-center justify-center gap-2 rounded-md border border-dashed text-sm text-muted-foreground hover:bg-primary/5'
